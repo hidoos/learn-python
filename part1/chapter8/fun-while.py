@@ -1,5 +1,3 @@
-# 
-
 def get_format_fullname(firstname="", lastname=""):
     return firstname.title() + " " + lastname.title()
 

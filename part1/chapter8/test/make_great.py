@@ -14,5 +14,10 @@ def show_magician(greet_magicians):
         print('the greet magician:' + magician)
 
 # invoke login function
-make_greet(magicians, greet_magicians)
+make_greet(magicians[:], greet_magicians)
+
+print('\nprinting great magicians')
 show_magician(greet_magicians)
+
+print('\nprinting original magicians')
+show_magician(magicians)

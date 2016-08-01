@@ -26,7 +26,14 @@ class Car():
 class ElectricCar(Car):
     def __init__(self, make, model, year):
         super().__init__(make, model, year)
-        self.battery_size  = 70
+        self.battery = Battery(70)
+
+    def get_battery(self):
+        print('this car has ' + str(self.battery_size) + '-khw bettery!')
+
+class Battery():
+    def __init__(self, battery_size):
+        self.battery_size = 70
 
     def get_battery(self):
         print('this car has ' + str(self.battery_size) + '-khw bettery!')
@@ -42,4 +49,4 @@ my_tesla.increment_odometer(10)
 my_tesla.read_odometer()
 
 # childclass
-my_tesla.get_battery()
+my_tesla.battery.get_battery()
